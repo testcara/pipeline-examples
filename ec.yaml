@@ -1,0 +1,25 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: EnterpriseContractPolicy
+metadata:
+  name: always-pass-policy
+spec:
+  description: "This policy will always pass all checks"
+  configuration:
+    include:
+      - always_pass
+  sources:
+    - name: Default
+      policy:
+        - |
+          package policy.always_pass
+
+          # This rule will always evaluate to true, causing the policy to pass
+          always_pass {
+            true
+          }
+
+  publicKey: |
+    -----BEGIN PUBLIC KEY-----
+    MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEGXaEV+aKKay8qOSHFrIcF0Jgb31
+    11GtBbYTjfBPVfpK/wUehb/O7YgCz9ZnOZHuaKN+CvyNGfWUPPK8OGDp0w==
+    -----END PUBLIC KEY-----
