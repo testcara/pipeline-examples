@@ -1,0 +1,8 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Release
+metadata:
+ name: first-release
+ namespace: wlin-tenant
+spec:
+ releasePlan: release-plan
+ snapshot: test-component-coustom-xqs8l
