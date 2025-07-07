@@ -4,17 +4,17 @@ metadata:
   labels:
     release.appstudio.openshift.io/auto-release: 'true'
   name: test-rpa
-  namespace: sbudhwar-1-tenant
+  namespace: rakshett-tenant
 spec:
   applications:
     - new-test-app
-  origin: sbudhwar-1-tenant
+  origin: rakshett-tenant
   pipeline: 
     pipelineRef:
       resolver: 'git'
       params:
         - name: 'url'
-          value: 'https://github.com/sahil143/pipeline-examples'
+          value: 'https://github.com/rakshett/pipeline-examples'
         - name: 'revision'
           value: 'main'
         - name: 'pathInRepo'
